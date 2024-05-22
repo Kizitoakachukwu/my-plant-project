@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8C00C33B-97ED-45C1-8C4B-ACAA627EE261}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>my_plant_project</RootNamespace>
+    <AssemblyName>my plant project</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="model\ADO Access\DataAccess.cs" />
+    <Compile Include="model\Details.cs" />
+    <Compile Include="plantDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>plantDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\harmfulForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\harmfulForm2.Designer.cs">
+      <DependentUpon>harmfulForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\main.Designer.cs">
+      <DependentUpon>main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\MethodtreatmentForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\MethodtreatmentForm2.Designer.cs">
+      <DependentUpon>MethodtreatmentForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\OperationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\OperationForm.Designer.cs">
+      <DependentUpon>OperationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\operationForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\operationForm2.Designer.cs">
+      <DependentUpon>operationForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\operationlistForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\operationlistForm2.Designer.cs">
+      <DependentUpon>operationlistForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\PlantForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\PlantForm.Designer.cs">
+      <DependentUpon>PlantForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="model\Harmful_obj.cs" />
+    <Compile Include="model\MethodTreatment.cs" />
+    <Compile Include="model\Operation.cs" />
+    <Compile Include="model\Operationlist.cs" />
+    <Compile Include="model\plants.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="model\special_treatment.cs" />
+    <Compile Include="Windows\specialtreatmentForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\specialtreatmentForm2.Designer.cs">
+      <DependentUpon>specialtreatmentForm2.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Windows\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\harmfulForm2.resx">
+      <DependentUpon>harmfulForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\main.resx">
+      <DependentUpon>main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\MethodtreatmentForm2.resx">
+      <DependentUpon>MethodtreatmentForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\OperationForm.resx">
+      <DependentUpon>OperationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\operationForm2.resx">
+      <DependentUpon>operationForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\operationlistForm2.resx">
+      <DependentUpon>operationlistForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\PlantForm.resx">
+      <DependentUpon>PlantForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Windows\specialtreatmentForm2.resx">
+      <DependentUpon>specialtreatmentForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="plantDataSet.xsc">
+      <DependentUpon>plantDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="plantDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>plantDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="plantDataSet.xss">
+      <DependentUpon>plantDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\DataAccess.datasource" />
+    <None Include="Properties\DataSources\Details.datasource" />
+    <None Include="Properties\DataSources\Form1.datasource" />
+    <None Include="Properties\DataSources\Harmful_obj.datasource" />
+    <None Include="Properties\DataSources\harmful_objForm.datasource" />
+    <None Include="Properties\DataSources\MethodTreatment.datasource" />
+    <None Include="Properties\DataSources\my_plant_project.PlantsDataSet1TableAdapters.DetailsTableAdapter.datasource" />
+    <None Include="Properties\DataSources\my_plant_project.PlantsDataSet1TableAdapters.harmful_objzTableAdapter.datasource" />
+    <None Include="Properties\DataSources\my_plant_project.PlantsDataSet1TableAdapters.method_treatmentTableAdapter.datasource" />
+    <None Include="Properties\DataSources\my_plant_project.PlantsDataSet1TableAdapters.Operation_listTableAdapter.datasource" />
+    <None Include="Properties\DataSources\my_plant_project.PlantsDataSet1TableAdapters.OperetionTableAdapter.datasource" />
+    <None Include="Properties\DataSources\my_plant_project.PlantsDataSet1TableAdapters.PlantsTableAdapter.datasource" />
+    <None Include="Properties\DataSources\my_plant_project.PlantsDataSet1TableAdapters.special_treatmentTableAdapter.datasource" />
+    <None Include="Properties\DataSources\my_plant_project.PlantsDataSet1TableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\my_plant_project.PlantsDataSet1TableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\DataSources\my_plant_project.PlantsDataSetTableAdapters.DetailsTableAdapter.datasource" />
+    <None Include="Properties\DataSources\my_plant_project.PlantsDataSetTableAdapters.harmful_objzTableAdapter.datasource" />
+    <None Include="Properties\DataSources\my_plant_project.PlantsDataSetTableAdapters.method_treatmentTableAdapter.datasource" />
+    <None Include="Properties\DataSources\my_plant_project.PlantsDataSetTableAdapters.Operation_listTableAdapter.datasource" />
+    <None Include="Properties\DataSources\my_plant_project.PlantsDataSetTableAdapters.OperetionTableAdapter.datasource" />
+    <None Include="Properties\DataSources\my_plant_project.PlantsDataSetTableAdapters.PlantsTableAdapter.datasource" />
+    <None Include="Properties\DataSources\my_plant_project.PlantsDataSetTableAdapters.special_treatmentTableAdapter.datasource" />
+    <None Include="Properties\DataSources\my_plant_project.PlantsDataSetTableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\my_plant_project.PlantsDataSetTableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\DataSources\my_plant_project.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\my_plant_project.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\Operation.datasource" />
+    <None Include="Properties\DataSources\OperationForm.datasource" />
+    <None Include="Properties\DataSources\Operationlist.datasource" />
+    <None Include="Properties\DataSources\PlantForm.datasource" />
+    <None Include="Properties\DataSources\plants.datasource" />
+    <None Include="Properties\DataSources\PlantsDataSet.datasource" />
+    <None Include="Properties\DataSources\PlantsDataSet.DetailsDataTable.datasource" />
+    <None Include="Properties\DataSources\PlantsDataSet.DetailsRow.datasource" />
+    <None Include="Properties\DataSources\PlantsDataSet.DetailsRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\PlantsDataSet.DetailsRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\PlantsDataSet.harmful_objzDataTable.datasource" />
+    <None Include="Properties\DataSources\PlantsDataSet.harmful_objzRow.datasource" />
+    <None Include="Properties\DataSources\PlantsDataSet.harmful_objzRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\PlantsDataSet.harmful_objzRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\PlantsDataSet.method_treatmentDataTable.datasource" />
+    <None Include="Properties\DataSources\PlantsDataSet.method_treatmentRow.datasource" />
+    <None Include="Properties\DataSources\PlantsDataSet.method_treatmentRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\PlantsDataSet.method_treatmentRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\PlantsDataSet.Operation_listDataTable.datasource" />
+    <None Include="Properties\DataSources\PlantsDataSet.Operation_listRow.datasource" />
+    <None Include="Properties\DataSources\PlantsDataSet.Operation_listRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\PlantsDataSet.Operation_listRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\PlantsDataSet.OperetionDataTable.datasource" />
+    <None Include="Properties\DataSources\PlantsDataSet.OperetionRow.datasource" />
+    <None Include="Properties\DataSources\PlantsDataSet.OperetionRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\PlantsDataSet.OperetionRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\PlantsDataSet.PlantsDataTable.datasource" />
+    <None Include="Properties\DataSources\PlantsDataSet.PlantsRow.datasource" />
+    <None Include="Properties\DataSources\PlantsDataSet.PlantsRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\PlantsDataSet.PlantsRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\PlantsDataSet.special_treatmentDataTable.datasource" />
+    <None Include="Properties\DataSources\PlantsDataSet.special_treatmentRow.datasource" />
+    <None Include="Properties\DataSources\PlantsDataSet.special_treatmentRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\PlantsDataSet.special_treatmentRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\PlantsDataSet1.datasource" />
+    <None Include="Properties\DataSources\PlantsDataSet1.DetailsDataTable.datasource" />
+    <None Include="Properties\DataSources\PlantsDataSet1.DetailsRow.datasource" />
+    <None Include="Properties\DataSources\PlantsDataSet1.DetailsRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\PlantsDataSet1.DetailsRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\PlantsDataSet1.harmful_objzDataTable.datasource" />
+    <None Include="Properties\DataSources\PlantsDataSet1.harmful_objzRow.datasource" />
+    <None Include="Properties\DataSources\PlantsDataSet1.harmful_objzRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\PlantsDataSet1.harmful_objzRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\PlantsDataSet1.method_treatmentDataTable.datasource" />
+    <None Include="Properties\DataSources\PlantsDataSet1.method_treatmentRow.datasource" />
+    <None Include="Properties\DataSources\PlantsDataSet1.method_treatmentRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\PlantsDataSet1.method_treatmentRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\PlantsDataSet1.Operation_listDataTable.datasource" />
+    <None Include="Properties\DataSources\PlantsDataSet1.Operation_listRow.datasource" />
+    <None Include="Properties\DataSources\PlantsDataSet1.Operation_listRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\PlantsDataSet1.Operation_listRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\PlantsDataSet1.OperetionDataTable.datasource" />
+    <None Include="Properties\DataSources\PlantsDataSet1.OperetionRow.datasource" />
+    <None Include="Properties\DataSources\PlantsDataSet1.OperetionRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\PlantsDataSet1.OperetionRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\PlantsDataSet1.PlantsDataTable.datasource" />
+    <None Include="Properties\DataSources\PlantsDataSet1.PlantsRow.datasource" />
+    <None Include="Properties\DataSources\PlantsDataSet1.PlantsRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\PlantsDataSet1.PlantsRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\PlantsDataSet1.special_treatmentDataTable.datasource" />
+    <None Include="Properties\DataSources\PlantsDataSet1.special_treatmentRow.datasource" />
+    <None Include="Properties\DataSources\PlantsDataSet1.special_treatmentRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\PlantsDataSet1.special_treatmentRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\DataSources\special_treatment.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\weeds.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\god-kachestva-new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\god-kachestva-new1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rose plamt.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deco images.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plants.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Без названия.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled design.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %281%29.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %282%29.jfif" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
